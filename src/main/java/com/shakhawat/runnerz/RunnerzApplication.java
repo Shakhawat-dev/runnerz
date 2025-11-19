@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.shakhawat.runnerz.run.Location;
 import com.shakhawat.runnerz.run.Run;
+import com.shakhawat.runnerz.run.JdbcClientRunRepository;
 
 @SpringBootApplication
 public class RunnerzApplication {
@@ -20,21 +21,4 @@ public class RunnerzApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RunnerzApplication.class, args);
 	}
-
-	@Bean
-	CommandLineRunner runner() {
-		return args -> {
-			Run run = new Run(
-				1,
-				"Morning Run",
-				java.time.LocalDateTime.now(),
-				LocalDateTime.now().plusHours(1),
-				5,
-				Location.OUTDOOR
-			);
-
-			log.info("Run: " + run);
-		};
-	}
-
 }

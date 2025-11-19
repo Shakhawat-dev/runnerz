@@ -1,0 +1,86 @@
+{
+    "runs": [
+        {
+            "id": 1,
+            "title": "Morning Run",
+            "startedOn": "2024-06-15T06:30:00.000000",
+            "completedOn": "2024-06-15T07:15:00.000000",
+            "miles": 5,
+            "location": "INDOOR"
+        },
+        {
+            "id": 2,
+            "title": "Evening Jog",
+            "startedOn": "2024-06-16T18:00:00.000000",
+            "completedOn": "2024-06-16T18:45:00.000000",
+            "miles": 4,
+            "location": "OUTDOOR"
+        },
+        {
+            "id": 3,
+            "title": "Weekend Sprint",
+            "startedOn": "2024-06-17T09:00:00.000000",
+            "completedOn": "2024-06-17T09:30:00.000000",
+            "miles": 3,
+            "location": "INDOOR"
+        },
+        {
+            "id": 4,
+            "title": "City Run",
+            "startedOn": "2024-06-18T07:00:00.000000",
+            "completedOn": "2024-06-18T07:50:00.000000",
+            "miles": 6,
+            "location": "OUTDOOR"
+        },
+        {
+            "id": 5,
+            "title": "Park Jog",
+            "startedOn": "2024-06-19T17:30:00.000000",
+            "completedOn": "2024-06-19T18:10:00.000000",
+            "miles": 4,
+            "location": "OUTDOOR"
+        },
+        {
+            "id": 6,
+            "title": "Treadmill Session",
+            "startedOn": "2024-06-20T06:45:00.000000",
+            "completedOn": "2024-06-20T07:30:00.000000",
+            "miles": 5,
+            "location": "INDOOR"
+        },
+        {
+            "id": 7,
+            "title": "Hill Run",
+            "startedOn": "2024-06-21T08:00:00.000000",
+            "completedOn": "2024-06-21T08:40:00.000000",
+            "miles": 4,
+            "location": "OUTDOOR"
+        },
+        {
+            "id": 8,
+            "title": "Sunset Jog",
+            "startedOn": "2024-06-22T19:00:00.000000",
+            "completedOn": "2024-06-22T19:35:00.000000",
+            "miles": 3,
+            "location": "OUTDOOR"
+        },
+        {
+            "id": 9,
+            "title": "Morning Sprint",
+            "startedOn": "2024-06-23T06:15:00.000000",
+            "completedOn": "2024-06-23T06:45:00.000000",
+            "miles": 3,
+            "location": "INDOOR"
+        },
+        {
+            "id": 10,
+            "title": "Evening Run",
+            "startedOn": "2024-06-24T18:30:00.000000",
+            "completedOn": "2024-06-24T19:15:00.000000",
+            "miles": 5,
+            "location": "OUTDOOR"
+        }
+        
+    ]
+}
+

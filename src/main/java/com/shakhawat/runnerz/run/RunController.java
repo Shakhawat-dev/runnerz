@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -48,33 +50,27 @@ public class RunController {
     // post
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    void createRun(@Valid @RequestBody Run run) {
-        runRepository.create(run);
+    void create(@Valid @RequestBody Run run) {
+        runRepository.save(run);
     }
 
     // put
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    void updateRun(@RequestBody Run run, @PathVariable Integer id) {
-        Optional<Run> existingRun = runRepository.findById(id);
-
-        if (existingRun.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        } else {
-            runRepository.update(run, id);
-        }
+    void update(@Valid @RequestBody Run run, @PathVariable Integer id) {
+        runRepository.save(run);
     }
 
     // delete
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
-    void deleteRun(@PathVariable Integer id) {
-        Optional<Run> existingRun = runRepository.findById(id);
-
-        if (existingRun.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        } else {
-            runRepository.delete(id);
-        }
+    void delete(@PathVariable Integer id) {
+        runRepository.delete(runRepository.findById(id).get());
     }
+
+    @GetMapping("/location/{location}")
+    List<Run> findByLocation(@PathVariable String location) {
+        return runRepository.findAllByLocation(location);
+    }
+    
 }
